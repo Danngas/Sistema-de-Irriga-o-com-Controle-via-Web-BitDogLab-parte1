@@ -50,8 +50,4 @@ O buzzer também tem uma função de alarme: ele é ativado quando o sistema ent
 
 ## Licença
 
-Este projeto é feito com amor e carinho. Sinta-se livre para usar, modificar e compartilhar com a galera. Só não esquece de dar aquele crédito maroto pro criador! 😎
 
----
-
-Valeu por conferir, macaco! Qualquer dúvida, só chamar. 😜
