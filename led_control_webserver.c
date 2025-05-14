@@ -502,7 +502,7 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
              "<!DOCTYPE html>\n"
              "<html>\n"
              "<head>\n"
-             "<title>Embarcatech - LED Control</title>\n"
+             "<title>Sistema Irrigacao</title>\n"
              "<meta charset=\"UTF-8\">\n" // Adicionando o meta tag para UTF-8
              "<style>\n"
              "body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f7f6; color: #333; }\n"
@@ -514,7 +514,7 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
              "<body>\n"
 
              // Título da página
-             "<h1>Controle de LED</h1>\n"
+             "<h1>Irrigacao IoT</h1>\n"
 
              // Exibe o modo atual (Automático ou Manual)
              "<p class=\"mode\">Modo Atual: %s</p>\n"
