@@ -1,53 +1,43 @@
 # Sistema de Irrigação Automático
 
-### Fala, macacada! 🐒
+## Descrição
 
-Esse projeto é um sistema de irrigação automático com dois modos: **Manual** e **Automático**, controlado pela placa BitDogLab com o microcontrolador RP2040. O mais daora é que a galera pode controlar tudo via uma interface web!
+Este projeto tem como objetivo o desenvolvimento de um sistema de irrigação inteligente utilizando a placa **BitDogLab** com o microcontrolador **RP2040**. O sistema possui dois modos de operação: **Modo Manual** e **Modo Automático**, sendo controlado através de uma interface web, permitindo ao usuário gerenciar os setores de irrigação de forma prática e eficiente.
 
-## O que o sistema faz?
+## Funcionalidades
 
-O sistema tem dois modos principais:
+### Modo Manual
+No **Modo Manual**, o usuário pode controlar os setores de irrigação individualmente. Cada setor pode ser ligado ou desligado através de botões na interface web. Quando uma ação de ligar ou desligar um setor é realizada, o buzzer emite um som para indicar que a ação foi executada.
 
-1. **Modo Manual**: Aqui, você tem o controle total! Pode ligar ou desligar os setores de irrigação manualmente pelo botão da interface web. Quando um setor é ligado ou desligado, o buzzer solta aquele som de confirmação. 🔊
-   
-2. **Modo Automático**: O sistema vai alternando entre os setores automaticamente, de 1 a 4, a cada 10 segundos. E a cada troca de setor, o buzzer avisa! 🕹️🔄
+### Modo Automático
+No **Modo Automático**, o sistema alterna automaticamente entre os setores de irrigação, ligando e desligando cada setor com um intervalo fixo de 10 segundos. O buzzer emite um som cada vez que a troca entre os setores ocorre. O tempo de troca não pode ser ajustado diretamente pelo usuário, sendo definido no código.
 
-### Modo Manual x Modo Automático
+### Alternar Entre Modos
+O usuário pode alternar entre o **Modo Manual** e o **Modo Automático** através da interface web. O sistema permite essa transição de maneira simples, através de um botão de alternância.
 
-- No **Modo Manual**, você manda ver e decide qual setor ligar ou desligar, usando os botões na interface web. Isso pode ser feito de forma individual para cada setor.
-- No **Modo Automático**, a parada acontece sozinha. Os setores vão se alternando a cada 10 segundos, no estilo "agora é a vez do setor X". E claro, cada troca vem com um som do buzzer pra avisar que foi trocado. 
+### Exibição Visual
+A matriz de LEDs exibe os quatro setores de irrigação. Quando um setor está desligado, o LED correspondente fica vermelho; quando está ligado, o LED fica verde. Além disso, o display exibe a animação que indica o estado de cada setor, mostrando se ele está ligado ou desligado.
 
-## Funcionalidades do Sistema
+### Alarme Sonoro
+O sistema utiliza um buzzer para emitir um alarme sempre que um setor é alterado, seja manualmente ou automaticamente. O alarme é uma interrupção programada que é ativada quando o sistema entra no **Modo Automático** e é desativada quando o modo é desligado.
 
-- **Alternar entre os modos**: Dá pra alternar entre o **Modo Manual** e o **Modo Automático** pela interface web.
-- **Controle de Setores**: Ligar/desligar setores manualmente (Setor 1, Setor 2, Setor 3 e Setor 4).
-- **Indicação Visual**: A matriz de LEDs mostra os setores, onde os LEDs ficam **vermelhos** quando desligados e **verdes** quando ligados.
-- **Alarme Sonoro**: Sempre que muda de setor (ou no Modo Automático), o buzzer emite um som pra avisar que o setor foi alterado. 🎶
-  
-### Como Funciona o Código?
+## Tecnologias Utilizadas
 
-O código foi feito pra controlar a irrigação de forma simples e sem complicação! O sistema roda tudo de acordo com a programação que define os tempos de troca entre os setores (10 segundos). Além disso, o código cuida da parte sonora (buzzer) e do controle de modo via interface web.
+- **BitDogLab** (microcontrolador RP2040)
+- **Interface Web** (para controle e alternância entre os modos)
+- **Matriz de LEDs** (para exibição dos setores)
+- **Buzzer** (para indicações sonoras)
+- **C** (linguagem de programação utilizada no código)
 
-#### Alarme no Modo Automático
+## Como Rodar o Projeto
 
-O buzzer também tem uma função de alarme: ele é ativado quando o sistema entra no **Modo Automático** e toca toda vez que o setor é trocado. É uma interrupção que rola a cada 10 segundos pra garantir a troca dos setores!
-
-## Como Rodar o Projeto?
-
-1. Faça o clone do repositório no seu PC.
-2. Conecte a BitDogLab na sua máquina.
-3. Compile e faça o upload do código na placa.
-4. Abra o navegador e acesse a interface web pelo IP da sua placa.
-5. A partir daí, você pode controlar a irrigação e alternar entre os modos.
-
-## Tecnologias Usadas
-
-- BitDogLab (com microcontrolador RP2040)
-- Interface Web (pra controle)
-- Buzzer para indicações sonoras
-- Matriz de LEDs para exibição dos setores
-- Código em C com lógica simples de controle de setores e interrupções
+1. Clone este repositório em sua máquina.
+2. Conecte a placa **BitDogLab** à sua máquina.
+3. Compile o código e faça o upload na placa.
+4. Acesse a interface web no navegador através do IP da sua placa.
+5. A partir daí, você poderá controlar os setores e alternar entre os modos.
 
 ## Licença
 
+Este projeto é de código aberto. Sinta-se à vontade para usar, modificar e compartilhar. Para modificações, por favor, dê o devido crédito ao autor do projeto.
 
